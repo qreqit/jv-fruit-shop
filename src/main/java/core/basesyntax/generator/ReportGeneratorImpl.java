@@ -10,7 +10,7 @@ public class ReportGeneratorImpl implements ReportGenerator {
     public String generateReport() {
         StringBuilder report = new StringBuilder();
         report.append(HEADER);
-        for (Map.Entry<String, Integer> mapObject : Storage.storage.entrySet()) {
+        for (Map.Entry<String, Integer> mapObject : Storage.getStorage().entrySet()) {
             String line = mapObject.getKey() + "," + mapObject.getValue() + "\n";
             report.append(line);
         }
