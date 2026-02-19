@@ -1,4 +1,4 @@
-package core.basesyntax.file;
+package core.basesyntax.reader;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,7 +20,7 @@ public class FileReaderImpl implements FileReader {
             return readLines;
 
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Can'r read file: " + file);
         }
 
     }

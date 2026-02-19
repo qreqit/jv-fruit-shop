@@ -9,7 +9,7 @@ public class OperationBalanceStrategyImpl implements OperationStrategy {
     public void apply(FruitTransaction fruitTransaction) {
         Storage.getStorage().put(
                 fruitTransaction.getFruit(),
-                fruitTransaction.getQuantity() // просто встановлюємо
+                fruitTransaction.getQuantity()
         );
     }
 

@@ -2,8 +2,8 @@ package core.basesyntax;
 
 import core.basesyntax.data.DataConverter;
 import core.basesyntax.data.DataConverterImpl;
-import core.basesyntax.file.FileReader;
-import core.basesyntax.file.FileReaderImpl;
+import core.basesyntax.reader.FileReader;
+import core.basesyntax.reader.FileReaderImpl;
 import core.basesyntax.generator.ReportGenerator;
 import core.basesyntax.generator.ReportGeneratorImpl;
 import core.basesyntax.model.FruitTransaction;
@@ -22,7 +22,6 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-
         FileReader fileReader = new FileReaderImpl();
         List<String> lines = fileReader.read("input.csv");
         Map<FruitTransaction.Operation, OperationStrategy> operationHandlers = new HashMap<>();
@@ -45,7 +44,6 @@ public class Main {
 
         ReportGenerator reportGenerator = new ReportGeneratorImpl();
         String report = reportGenerator.generateReport();
-
         FileWriter fileWriter = new FileWriterImpl();
         fileWriter.write(report, "finalReport.csv");
     }
