@@ -2,11 +2,11 @@ package core.basesyntax;
 
 import core.basesyntax.data.DataConverter;
 import core.basesyntax.data.DataConverterImpl;
-import core.basesyntax.reader.FileReader;
-import core.basesyntax.reader.FileReaderImpl;
 import core.basesyntax.generator.ReportGenerator;
 import core.basesyntax.generator.ReportGeneratorImpl;
 import core.basesyntax.model.FruitTransaction;
+import core.basesyntax.reader.FileReader;
+import core.basesyntax.reader.FileReaderImpl;
 import core.basesyntax.service.ShopService;
 import core.basesyntax.service.ShopServiceImpl;
 import core.basesyntax.strategy.OperationStrategy;
